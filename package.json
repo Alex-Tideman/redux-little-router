@@ -47,7 +47,7 @@
     "router",
     "middleware"
   ],
-  "author": "Tyler Thompson",
+  "author": "Alex Tideman forked from Tyler Thompson",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/FormidableLabs/redux-little-router/issues"
