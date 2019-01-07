@@ -8,8 +8,12 @@ export default (href: Href, basename: ?string) => {
 
   let { pathname } = href;
   const { search, hash } = href;
-  if (hash && hash !== '' && pathname.slice(-1) === '/') {
-    pathname = pathname.slice(0, pathname.length - 1) + hash;
+  if (hash && hash !== '') {
+    if (pathname.slice(-1) === '/') {
+      pathname = `${pathname.slice(0, pathname.length - 1)}${hash}/`;
+    } else {
+      pathname += hash;
+    }
   }
 
   return `${basename || ''}${pathname}${search || ''}`;
