@@ -6,6 +6,11 @@ export default (href: Href, basename: ?string) => {
     return `${basename || ''}${href}`;
   }
 
+  console.log('Href: ', href);
   const { pathname, search, hash } = href;
-  return `${basename || ''}${pathname}${hash || ''}${search || ''}`;
+  console.log('Pathname: ', pathname, 'Hash: ', hash, 'Search: ', search);
+  const url = `${basename || ''}${pathname}${hash || ''}${search || ''}`;
+  console.log('Url: ', url);
+
+  return url;
 };
